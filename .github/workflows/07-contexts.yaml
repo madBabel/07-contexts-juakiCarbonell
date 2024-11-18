@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Show Info
         run: |
-          echo "Nombre del evento ${{github.event.}}"
+          echo "Nombre del evento"
           eco "Ref: ${{github.ref}}"
           echo "Running whenever branch is features ${{github.sha}}"
           echo "Another line with GitHub ref: ${{github.ref}}"
