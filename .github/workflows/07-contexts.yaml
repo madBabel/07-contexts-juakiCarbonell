@@ -1,0 +1,20 @@
+name: 07 - Contexts.
+on:
+  push
+jobs:
+  echo-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Info
+        run: |
+          echo "Nombre del evento ${{github.event.}}"
+          eco "Ref: ${{github.ref}}"
+          echo "Running whenever branch is features ${{github.sha}}"
+          echo "Another line with GitHub ref: ${{github.ref}}"
+          echo "Workflow triggered by: ${{github.actor}}"
+          echo "Flujo de trabajo: ${{github.actor}}"
+      - name: Retrieve Variable
+        run: |
+           echo "My var ${{vars.MY_VAR}}"
+           echo "My var ${{vars.ORG_VAR}}"
+          
